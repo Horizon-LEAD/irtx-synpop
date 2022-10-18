@@ -1,0 +1,43 @@
+## Synthetic population pipeline for LEAD
+
+# This is the path to a directory where the pipeline can store temporary data
+working_directory: /path/to/working/directory
+
+# This section defines which parts of the pipeline should be run
+run:
+  - synthesis.output # To create the output population in the output_path (see below)
+  # - matsim.output # Uncomment, if you want to run the full simulation (you'll need Java for that)
+
+# Here the configuraiton of the pipeline starts
+config:
+  # Some general configuration
+  processes: 12
+
+  # Define whether to use ENTD or EGT as the household travel survey (HTS)
+  hts: entd
+
+  # Define sampling rate and random seed for the output population
+  sampling_rate: 1.0
+  random_seed: 1234
+
+  # Paths to the input data and where the output should be stored
+  data_path: /path/to/data
+  output_path: /path/to/output
+
+  # Only interesting if you run the simulation
+  java_memory: 40G
+
+  # Lyon config
+  output_prefix: lead_
+
+  regions: []
+  departments: ["01", 38, 42, 69, 69M]
+
+  census_path: rp_2015/FD_INDCVIZE_2015.dbf
+  bdtopo_path: bdtopo_lyon/ADRESSE.shp
+  gtfs_path: gtfs/lyon/GTFS_TCL.ZIP;gtfs/lyon/export_gtfs_voyages.zip;gtfs/lyon/export-intercites-gtfs-last.zip;gtfs/lyon/export-ter-gtfs-last.zip;gtfs/lyon/CAPI.GTFS.zip;gtfs/lyon/GTFS_RX.ZIP;gtfs/lyon/SEM-GTFS.zip;gtfs/lyon/stas.gtfs.zip;gtfs/lyon/VIENNE.GTFS.zip
+  osm_path: osm/rhone-alpes-latest.osm.pbf
+
+  # LEAD config
+  lead_year: 2022
+  lead_path: /path/to/lead/data
