@@ -1,9 +1,7 @@
 # IRTX Synthetic population model
 
 ## TODO
-- Provide static input to INLECOM (so no need to download all data individually)
-- Test that all of this works smoothly with the provided data
-- Generate the standard cases for downstream testing
+- Prepare input and output data
 - Add JSON
 
 ## Introduction
@@ -38,14 +36,20 @@ up the population of the study area to the future expected resident count.
 ## Requirements
 
 All explanations in this document refer to the branch `lead` in the model's
-original Github repository and, specifically, the commit `272ea58` is used
+original Github repository and, specifically, the commit `51a0c37` is used
 throughout this document.
 
 ### Software requirements
 
 To run the model, the environment needs to be prepared:
 
-- A `conda` or `mamba` environment needs to be set up in which the Python code of the model is run. The repository provides `environment.yml` which describes the `conda` environment and all dependencies.
+- A `conda` environment needs to be set up in which the Python code of the model is run. The repository provides `environment.yml` which describes the `conda` environment and all dependencies:
+
+```bash
+conda env create -f environment.yml -n synpop
+```
+
+- Note that some of the dependencies installed via `conda > pip` need a recent compiler available on the system. On an Ubunutu system, it suffices to `apt install build-essential`.
 
 - A `Java` runtime needs to be present on the executing machine. It is recommended to set up an **Adoptium OpenJDK 11** (https://adoptium.net).
 
@@ -195,6 +199,8 @@ python3 prepare_config.py \
 
 Note that, here, a specific configuration for the scenario `XYZ` is created. The option `template-path` corresponds to the template the is provided in the LEAD repository and `target-path` corresponds to where the prepared configuration file should be written. Also note the last two options that define which output components to active.
 
+The resulting configuration file should be put in the root folder of the cloned model repository to execute it.
+
 #### Output
 
 The output depends on whether the output for the synthetic population and/or the input for the agent-based transport simulation are chosen to be created in the configuration (see above).
@@ -223,14 +229,20 @@ For the *agent-based simulation*, the following files are created:
 # Running the model
 
 First, the environment needs to be set up. All relevant dependencies should then
-be present, and the user can enter the generated `conda` environment.
+be present, and the user can enter the generated `conda` environment:
+
+```bash
+conda activate synpop
+```
 
 As described above, the configuration process has been simplified. One can now
 call `prepare_config.xml` to create a configuration file, for instance, `lead_config.xml`.
 
-The pipeline can now be started by calling
+The pipeline should be called from its root directory (the cloned model repository)
+and can be started by calling
 
 ```bash
+cd /path/to/model
 python3 -m synpp lead_config.xml
 ```
 
