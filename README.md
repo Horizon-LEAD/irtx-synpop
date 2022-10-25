@@ -39,7 +39,7 @@ throughout this document.
 
 To run the model, the environment needs to be prepared:
 
-- A `conda` environment needs to be set up in which the Python code of the model is run. The repository provides `environment.yml` which describes the `conda` environment and all dependencies:
+- A `conda` environment needs to be set up in which the Python code of the model is run. The remote repository provides `environment.yml` which describes the `conda` environment and all dependencies:
 
 ```bash
 conda env create -f environment.yml -n synpop
