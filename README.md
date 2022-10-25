@@ -1,9 +1,5 @@
 # IRTX Synthetic population model
 
-## TODO
-- Prepare input and output data
-- Add JSON
-
 ## Introduction
 
 The present model generates a synthetic representation of households, persons
@@ -49,7 +45,7 @@ To run the model, the environment needs to be prepared:
 conda env create -f environment.yml -n synpop
 ```
 
-- Note that some of the dependencies installed via `conda > pip` need a recent compiler available on the system. On an Ubunutu system, it suffices to `apt install build-essential`.
+- Note that some of the dependencies installed via `conda > pip` need a recent compiler available on the system. Additionally, the MATSim instances that are run in the pipeline need to have access to the fonts available on the system. On an Ubunutu system, it suffices to `apt install build-essential fontconfig`.
 
 - A `Java` runtime needs to be present on the executing machine. It is recommended to set up an **Adoptium OpenJDK 11** (https://adoptium.net).
 
@@ -114,25 +110,25 @@ Synthetic population:
 /data/iris_2017/CONTOURS-IRIS.shx
 /data/codes_2017/reference_IRIS_geo2017.xls
 /data/sirene/StockEtablissement_utf8.csv
-/data/bdtopo/ADRESSE.shp
-/data/bdtopo/ADRESSE.cpg
-/data/bdtopo/ADRESSE.dbf
-/data/bdtopo/ADRESSE.prj
-/data/bdtopo/ADRESSE.shx
+/data/bdtopo_lyon/ADRESSE.shp
+/data/bdtopo_lyon/ADRESSE.cpg
+/data/bdtopo_lyon/ADRESSE.dbf²
+/data/bdtopo_lyon/ADRESSE.prj
+/data/bdtopo_lyon/ADRESSE.shx
 ```
 
 ```
 Transport system:
 /data/osm/rhone-alpes-latest.osm.pbf
-/data/gtfs/GTFS_TCL.ZIP
-/data/gtfs/CAPI.GTFS.zip
-/data/gtfs/GTFS_RX.ZIP
-/data/gtfs/SEM-GTFS.zip
-/data/gtfs/stas.gtfs.zip
-/data/gtfs/VIENNE.GTFS.zip
-/data/gtfs/export_gtfs_voyages.zip
-/data/gtfs/export-intercites-gtfs-last.zip
-/data/gtfs/export-ter-gtfs-last.zip
+/data/gtfs/lyon/GTFS_TCL.ZIP
+/data/gtfs/lyon/CAPI.GTFS.zip
+/data/gtfs/lyon/GTFS_RX.ZIP
+/data/gtfs/lyon/SEM-GTFS.zip
+/data/gtfs/lyon/stas.gtfs.zip
+/data/gtfs/lyon/VIENNE.GTFS.zip
+/data/gtfs/lyon/export_gtfs_voyages.zip
+/data/gtfs/lyon/export-intercites-gtfs-last.zip
+/data/gtfs/lyon/export-ter-gtfs-last.zip
 ```
 
 For testing purposes, a prepackaged collection of those data sets can be obtained
