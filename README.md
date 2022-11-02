@@ -137,7 +137,7 @@ from IRT SystemX.
 #### Configuration
 
 To run the pipeline, a configuration file needs to be provided. An example is
-given in the LEAD repository as `config_lead.template.yml`. The configuration file
+given in the LEAD repository as `data/template_lyon.yml`. The configuration file
 is in YAML format.
 
 There are some **mandatory** settings that need to be updated in the configuration file.
@@ -177,7 +177,7 @@ To ease configuration for the project LEAD, `prepare_config.py` is provided with
 
 ```bash
 python3 prepare_config.py \
-  --template-path config_lead.template.yml \
+  --template-path /path/to/irtx-synpop/data/template_lyon.yml \
   --target-path config_XYZ.xml \
   --working-directory /path/to/working_directory \
   --data-path /path/to/data \
