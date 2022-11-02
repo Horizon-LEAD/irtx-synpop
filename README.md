@@ -222,7 +222,7 @@ For the *agent-based simulation*, the following files are created:
 - `lead_transit_vehicles.xml.gz`: Describes the public transport vehicles
 - `lead_config.xml`: Pre-generated configuration file for the simulation
 
-# Running the model
+## Running the model
 
 First, the environment needs to be set up. All relevant dependencies should then
 be present, and the user can enter the generated `conda` environment:
