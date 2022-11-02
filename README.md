@@ -86,49 +86,49 @@ In brief the following data sets need to be collected:
 - GTFS data of the regional public transport operators
 
 All data sets should be arranged as described in an arbitrary directory, from here
-on denoted as `/data`. Finally, `/data` should show the following structure:
+on denoted as `/input`. Finally, `/input` should show the following structure:
 
 ```
 Synthetic population:
-/data/rp_2015/FD_INDCVIZE_2015.dbf
-/data/rp_2015/FD_MOBPRO_2015.dbf
-/data/rp_2015/FD_MOBSCO_2015.dbf
-/data/rp_2015/base-ic-evol-struct-pop-2015.xls
-/data/filosofi_2015/FILO_DISP_COM.xls
-/data/filosofi_2015/FILO_DISP_REG.xls
-/data/bpe_2021/bpe21_ensemble_xy.csv
-/data/entd_2008/Q_individu.csv
-/data/entd_2008/Q_tcm_individu.csv
-/data/entd_2008/Q_menage.csv
-/data/entd_2008/Q_tcm_menage_0.csv
-/data/entd_2008/K_deploc.csv
-/data/entd_2008/Q_ind_lieu_teg.csv
-/data/iris_2017/CONTOURS-IRIS.cpg
-/data/iris_2017/CONTOURS-IRIS.dbf
-/data/iris_2017/CONTOURS-IRIS.prj
-/data/iris_2017/CONTOURS-IRIS.shp
-/data/iris_2017/CONTOURS-IRIS.shx
-/data/codes_2017/reference_IRIS_geo2017.xls
-/data/sirene/StockEtablissement_utf8.csv
-/data/bdtopo_lyon/ADRESSE.shp
-/data/bdtopo_lyon/ADRESSE.cpg
-/data/bdtopo_lyon/ADRESSE.dbf²
-/data/bdtopo_lyon/ADRESSE.prj
-/data/bdtopo_lyon/ADRESSE.shx
+/input/rp_2015/FD_INDCVIZE_2015.dbf
+/input/rp_2015/FD_MOBPRO_2015.dbf
+/input/rp_2015/FD_MOBSCO_2015.dbf
+/input/rp_2015/base-ic-evol-struct-pop-2015.xls
+/input/filosofi_2015/FILO_DISP_COM.xls
+/input/filosofi_2015/FILO_DISP_REG.xls
+/input/bpe_2021/bpe21_ensemble_xy.csv
+/input/entd_2008/Q_individu.csv
+/input/entd_2008/Q_tcm_individu.csv
+/input/entd_2008/Q_menage.csv
+/input/entd_2008/Q_tcm_menage_0.csv
+/input/entd_2008/K_deploc.csv
+/input/entd_2008/Q_ind_lieu_teg.csv
+/input/iris_2017/CONTOURS-IRIS.cpg
+/input/iris_2017/CONTOURS-IRIS.dbf
+/input/iris_2017/CONTOURS-IRIS.prj
+/input/iris_2017/CONTOURS-IRIS.shp
+/input/iris_2017/CONTOURS-IRIS.shx
+/input/codes_2017/reference_IRIS_geo2017.xls
+/input/sirene/StockEtablissement_utf8.csv
+/input/bdtopo_lyon/ADRESSE.shp
+/input/bdtopo_lyon/ADRESSE.cpg
+/input/bdtopo_lyon/ADRESSE.dbf²
+/input/bdtopo_lyon/ADRESSE.prj
+/input/bdtopo_lyon/ADRESSE.shx
 ```
 
 ```
 Transport system:
-/data/osm/rhone-alpes-latest.osm.pbf
-/data/gtfs/lyon/GTFS_TCL.ZIP
-/data/gtfs/lyon/CAPI.GTFS.zip
-/data/gtfs/lyon/GTFS_RX.ZIP
-/data/gtfs/lyon/SEM-GTFS.zip
-/data/gtfs/lyon/stas.gtfs.zip
-/data/gtfs/lyon/VIENNE.GTFS.zip
-/data/gtfs/lyon/export_gtfs_voyages.zip
-/data/gtfs/lyon/export-intercites-gtfs-last.zip
-/data/gtfs/lyon/export-ter-gtfs-last.zip
+/input/osm/rhone-alpes-latest.osm.pbf
+/input/gtfs/lyon/GTFS_TCL.ZIP
+/input/gtfs/lyon/CAPI.GTFS.zip
+/input/gtfs/lyon/GTFS_RX.ZIP
+/input/gtfs/lyon/SEM-GTFS.zip
+/input/gtfs/lyon/stas.gtfs.zip
+/input/gtfs/lyon/VIENNE.GTFS.zip
+/input/gtfs/lyon/export_gtfs_voyages.zip
+/input/gtfs/lyon/export-intercites-gtfs-last.zip
+/input/gtfs/lyon/export-ter-gtfs-last.zip
 ```
 
 For testing purposes, a prepackaged collection of those data sets can be obtained
