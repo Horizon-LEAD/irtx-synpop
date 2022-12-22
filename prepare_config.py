@@ -25,10 +25,12 @@ parser.add_argument("--sampling-rate", type = float, required = False, default =
 parser.add_argument("--lead-year", type = int, required = False, default = 2022)
 
 # Component
-parser.add_argument("--generate-synthetic-population", type = str, required = False, default = True)
-parser.add_argument("--generate-agent-based-simulation", type = str, required = False, default = False)
+parser.add_argument("--generate-synthetic-population", type = str, required = False, default = "true")
+parser.add_argument("--generate-agent-based-simulation", type = str, required = False, default = "false")
 
 arguments = parser.parse_args()
+for key, value in vars(arguments).items():
+    print(f'{key:33s}: {value}')
 
 ### Load tempalte
 

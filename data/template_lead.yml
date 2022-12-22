@@ -34,8 +34,8 @@ config:
   departments: ["01", 38, 42, 69, 69M]
 
   census_path: rp_2015/FD_INDCVIZE_2015.dbf
-  bdtopo_path: bdtopo_lyon/ADRESSE.shp
-  gtfs_path: gtfs/lyon/GTFS_TCL.ZIP;gtfs/lyon/export_gtfs_voyages.zip;gtfs/lyon/export-intercites-gtfs-last.zip;gtfs/lyon/export-ter-gtfs-last.zip;gtfs/lyon/CAPI.GTFS.zip;gtfs/lyon/GTFS_RX.ZIP;gtfs/lyon/SEM-GTFS.zip;gtfs/lyon/stas.gtfs.zip;gtfs/lyon/VIENNE.GTFS.zip
+  bdtopo_path: bdtopo/ADRESSE.shp
+  gtfs_path: gtfs/GTFS_TCL.ZIP;gtfs/export_gtfs_voyages.zip;gtfs/export-intercites-gtfs-last.zip;gtfs/export-ter-gtfs-last.zip;gtfs/CAPI.GTFS.zip;gtfs/GTFS_RX.ZIP;gtfs/SEM-GTFS.zip;gtfs/stas.gtfs.zip;gtfs/VIENNE.GTFS.zip
   osm_path: osm/rhone-alpes-latest.osm.pbf
 
   # LEAD config
