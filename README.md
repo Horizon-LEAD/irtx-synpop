@@ -300,3 +300,20 @@ agent-based simulation.
 --generate-synthetic-population true \
 --generate-agent-based-simulation true
 ```
+
+## Packaging information
+
+```
+docker build \
+  -t irtx-synpop:latest .
+
+docker run --rm -it \
+  --entrypoint /bin/bash
+  irtx-synpop:latest
+
+docker run --rm \
+  -e DATA_PATH=/path/to/data \
+  -e OUTPUT_PATH=/path/to/output \
+  irtx-synpop:latest
+```
+

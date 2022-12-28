@@ -44,7 +44,7 @@ RUN python3 --version && which python3 && echo $PATH \
     && mkdir -p /srv/app/data \
     && mkdir -p /srv/app/cache
 
-COPY prepare_config.py data/template_lead.yml entrypont.sh /srv/app/
+COPY prepare_config.py data/template_lead.yml entrypoint.sh /srv/app/
 WORKDIR /srv/app
 
 ENTRYPOINT [ "/bin/bash", "entrypoint.sh" ]
