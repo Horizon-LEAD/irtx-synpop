@@ -308,12 +308,22 @@ docker build \
   -t irtx-synpop:latest .
 
 docker run --rm -it \
-  --entrypoint /bin/bash
+  --entrypoint /bin/bash \
+  -v $PWD/sample-data/input:/data/input \
+  -e DATA_PATH=/data/input \
+  -e OUTPUT_PATH=/srv/app/output \
+  -e PROCESSES=4 \
+  -e MEMORY=8 \
+  -e SAMPLING_RATE=0.01 \
   irtx-synpop:latest
 
 docker run --rm \
-  -e DATA_PATH=/path/to/data \
-  -e OUTPUT_PATH=/path/to/output \
+  -v $PWD/sample-data/input:/data/input \
+  -e DATA_PATH=/data/input \
+  -e OUTPUT_PATH=/srv/app/output \
+  -e PROCESSES=4 \
+  -e MEMORY=8 \
+  -e SAMPLING_RATE=0.01 \
   irtx-synpop:latest
 ```
 
