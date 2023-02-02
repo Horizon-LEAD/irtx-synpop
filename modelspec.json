@@ -1,0 +1,154 @@
+{
+    "name": "IRTX Synthetic Population",
+    "description":"The model creates a synthetic travel demand data set including a digital representation of the population of a territory.",
+    "version": "1.0.0",
+    "status":"draft",
+    "types": [
+        {"name": "Demand", "description":"Description"}
+    ],
+    "dockerImage":"registry.gitlab.com/inlecom/lead/models/synpop:latest",
+    "url": "https://github.com/Horizon-LEAD/irtx-synpop",
+    "modelData":  [
+        {
+            "name": "Input data path",
+            "variableName": "DATA_PATH",
+            "description": "Directory where the input data is located",
+            "isOutput": false,
+            "isOutputDir": false,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "directory",
+                "description": "",
+                "dataType": "string",
+                "extension": null,
+                "validators": [],
+                "objectKeys": []
+            }
+        },
+        {
+            "name": "Output data path",
+            "variableName": "OUTPUT_PATH",
+            "description": "Directory where the output will be written (must exist)",
+            "isOutput": false,
+            "isOutputDir": true,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "directory",
+                "description": "",
+                "dataType": "string",
+                "extension": null,
+                "validators": [],
+                "objectKeys": []
+            }
+        },
+        {
+            "name": "Processes",
+            "variableName": "PROCESSES",
+            "description": "Number of processes to use",
+            "isOutput": false,
+            "isOutputDir": false,
+            "isOptional": true,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "number",
+                "description": "",
+                "dataType": "number",
+                "extension": null,
+                "validators": [],
+                "objectKeys": []
+            }
+        },
+        {
+            "name": "Memory",
+            "variableName": "MEMORY",
+            "description": "Memory to use",
+            "isOutput": false,
+            "isOutputDir": false,
+            "isOptional": true,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "number",
+                "description": "",
+                "dataType": "number",
+                "extension": null,
+                "validators": [],
+                "objectKeys": []
+            }
+        },
+        {
+            "name": "Random seed",
+            "variableName": "RANDOM_SEED",
+            "description": "Random seed to use",
+            "isOutput": false,
+            "isOutputDir": false,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "string",
+                "description": "",
+                "dataType": "string",
+                "extension": null,
+                "validators": [],
+                "objectKeys": []
+            }
+        },
+        {
+            "name": "Sampling rate",
+            "variableName": "SAMPLING_RATE",
+            "description": "Sampling rate to downscale the generated population",
+            "isOutput": false,
+            "isOutputDir": false,
+            "isOptional": true,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "number",
+                "description": "",
+                "dataType": "number",
+                "extension": null,
+                "validators": []
+            }
+        },
+        {
+            "name": "Do generate synthetic population?",
+            "variableName": "GENERATE_SYNTH_POP",
+            "description": "States whether the synthetic population data should be generated",
+            "isOutput": false,
+            "isOutputDir": false,
+            "isOptional": true,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "boolean",
+                "description": "",
+                "dataType": "boolean",
+                "extension": null,
+                "validators": []
+            }
+        },
+        {
+            "name": "Do generate agent-based simulation?",
+            "variableName": "GENERATE_AB_SIM",
+            "description": "States whether the agent-based simulation data should be generated",
+            "isOutput": false,
+            "isOutputDir": false,
+            "isOptional": true,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "boolean",
+                "description": "",
+                "dataType": "boolean",
+                "extension": null,
+                "validators": []
+            }
+        }
+    ]
+}
