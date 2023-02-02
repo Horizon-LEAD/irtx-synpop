@@ -39,12 +39,9 @@ RUN . "/root/miniconda/etc/profile.d/conda.sh" \
 ENV PATH=/root/miniconda/envs/ile-de-france/bin:$PATH
 
 RUN python3 --version && which python3 && echo $PATH \
-    && mkdir -p /srv/app/input \
-    && mkdir -p /srv/app/output \
-    && mkdir -p /srv/app/data \
-    && mkdir -p /srv/app/cache
+    && mkdir -p /srv/app/lead
 
 COPY prepare_config.py data/template_lead.yml entrypoint.sh /srv/app/
-WORKDIR /srv/app
+COPY data/projections_scenario_central.xls /srv/app/lead/
 
-ENTRYPOINT [ "/bin/bash", "entrypoint.sh" ]
+ENTRYPOINT [ "/srv/app/entrypoint.sh" ]
