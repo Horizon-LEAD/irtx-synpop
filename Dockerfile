@@ -42,6 +42,7 @@ RUN python3 --version && which python3 && echo $PATH \
     && mkdir -p /srv/app/lead
 
 COPY prepare_config.py data/template_lead.yml entrypoint.sh /srv/app/
+RUN chmod +x /srv/app/entrypoint.sh
 COPY data/projections_scenario_central.xls /srv/app/lead/
 
 ENTRYPOINT [ "/srv/app/entrypoint.sh" ]
