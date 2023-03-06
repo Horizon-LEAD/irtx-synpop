@@ -149,6 +149,159 @@
                 "extension": null,
                 "validators": []
             }
+        },
+        {
+            "name": "Activities CSV",
+            "variableName": "lead_activities",
+            "description": "Activities",
+            "isOutput": true,
+            "isOutputDir": false,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "file",
+                "description": "",
+                "dataType": "file",
+                "extension": "csv",
+                "validators": []
+            }
+        },
+        {
+            "name": "Activities GPKG",
+            "variableName": "lead_activities",
+            "description": "Activities",
+            "isOutput": true,
+            "isOutputDir": false,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "file",
+                "description": "",
+                "dataType": "file",
+                "extension": "gpkg",
+                "validators": []
+            }
+        },
+        {
+            "name": "Commutes GPKG",
+            "variableName": "lead_commutes",
+            "description": "Commutes",
+            "isOutput": true,
+            "isOutputDir": false,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "file",
+                "description": "",
+                "dataType": "file",
+                "extension": "gpkg",
+                "validators": []
+            }
+        },
+        {
+            "name": "Homes GPKG",
+            "variableName": "lead_homes",
+            "description": "Homes",
+            "isOutput": true,
+            "isOutputDir": false,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "file",
+                "description": "",
+                "dataType": "file",
+                "extension": "gpkg",
+                "validators": []
+            }
+        },
+        {
+            "name": "Households CSV",
+            "variableName": "lead_households",
+            "description": "Households",
+            "isOutput": true,
+            "isOutputDir": false,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "file",
+                "description": "",
+                "dataType": "file",
+                "extension": "csv",
+                "validators": []
+            }
+        },
+        {
+            "name": "Meta JSON",
+            "variableName": "lead_meta",
+            "description": "Meta",
+            "isOutput": true,
+            "isOutputDir": false,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "file",
+                "description": "",
+                "dataType": "file",
+                "extension": "json",
+                "validators": []
+            }
+        },
+        {
+            "name": "Persons CSV",
+            "variableName": "lead_persons",
+            "description": "Persons",
+            "isOutput": true,
+            "isOutputDir": false,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "file",
+                "description": "",
+                "dataType": "file",
+                "extension": "csv",
+                "validators": []
+            }
+        },
+        {
+            "name": "Trips CSV",
+            "variableName": "lead_trips",
+            "description": "Trips",
+            "isOutput": true,
+            "isOutputDir": false,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "file",
+                "description": "",
+                "dataType": "file",
+                "extension": "csv",
+                "validators": []
+            }
+        },
+        {
+            "name": "Trips GPKG",
+            "variableName": "lead_trips",
+            "description": "Trips",
+            "isOutput": true,
+            "isOutputDir": false,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "file",
+                "description": "",
+                "dataType": "file",
+                "extension": "gpkg",
+                "validators": []
+            }
         }
     ]
 }
