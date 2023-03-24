@@ -232,7 +232,7 @@ conda activate synpop
 ```
 
 As described above, the configuration process has been simplified. One can now
-call `prepare_config.xml` to create a configuration file, for instance, `lead_config.xml`.
+call `prepare_config.py` to create a configuration file, for instance, `lead_config.xml`.
 
 The pipeline should be called from its root directory (the cloned model repository)
 and can be started by calling
@@ -307,23 +307,17 @@ agent-based simulation.
 docker build \
   -t irtx-synpop:latest .
 
-docker run --rm -it \
-  --entrypoint /bin/bash \
-  -v $PWD/sample-data:/data \
-  -e DATA_PATH=/data/input \
-  -e OUTPUT_PATH=/data/output \
-  -e PROCESSES=2 \
-  -e MEMORY=4 \
-  -e SAMPLING_RATE=0.001 \
-  irtx-synpop:latest
-
 docker run --rm \
   -v $PWD/sample-data:/data \
-  -e DATA_PATH=/data/input \
-  -e OUTPUT_PATH=/data/output \
   -e PROCESSES=2 \
   -e MEMORY=4 \
-  -e SAMPLING_RATE=0.001 \
-  irtx-synpop:latest
+  -e SAMPLING_RATE=0.01 \
+  -e YEAR=2022 \
+  -e GENERATE_SYNTH_POP=true \
+  -e GENERATE_AB_SIM=false \
+  irtx-synpop:latest \
+  -v \
+  /data/input \
+  /data/output
 ```
 
