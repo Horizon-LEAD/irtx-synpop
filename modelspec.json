@@ -3,41 +3,38 @@
     "description":"The model creates a synthetic travel demand data set including a digital representation of the population of a territory.",
     "version": "1.0.0",
     "status":"draft",
-    "types": [
-        {"name": "Demand", "description":"Description"}
-    ],
     "dockerImage":"registry.gitlab.com/inlecom/lead/models/synpop:latest",
     "url": "https://github.com/Horizon-LEAD/irtx-synpop",
     "modelData":  [
         {
             "name": "Input data path",
-            "variableName": "DATA_PATH",
+            "variableName": "data_path",
             "description": "Directory where the input data is located",
             "isOutput": false,
             "isOutputDir": false,
             "isOptional": false,
-            "inputType": "ENV",
+            "inputType": "CLI",
             "chartType": "NONE",
             "modelDataType": {
-                "name": "directory",
+                "name": "file",
                 "description": "",
-                "dataType": "string",
-                "extension": null,
+                "dataType": "file",
+                "extension": "",
                 "validators": [],
                 "objectKeys": []
             }
         },
         {
             "name": "Output data path",
-            "variableName": "OUTPUT_PATH",
+            "variableName": "output_path",
             "description": "Directory where the output will be written (must exist)",
             "isOutput": false,
             "isOutputDir": true,
             "isOptional": false,
-            "inputType": "ENV",
+            "inputType": "CLI",
             "chartType": "NONE",
             "modelDataType": {
-                "name": "directory",
+                "name": "string",
                 "description": "",
                 "dataType": "string",
                 "extension": null,
@@ -87,13 +84,13 @@
             "description": "Random seed to use",
             "isOutput": false,
             "isOutputDir": false,
-            "isOptional": false,
+            "isOptional": true,
             "inputType": "ENV",
             "chartType": "NONE",
             "modelDataType": {
-                "name": "string",
+                "name": "number",
                 "description": "",
-                "dataType": "string",
+                "dataType": "number",
                 "extension": null,
                 "validators": [],
                 "objectKeys": []
@@ -114,6 +111,24 @@
                 "dataType": "number",
                 "extension": null,
                 "validators": []
+            }
+        },
+        {
+            "name": "Year",
+            "variableName": "YEAR",
+            "description": "The year to perform the simulations for",
+            "isOutput": false,
+            "isOutputDir": false,
+            "isOptional": false,
+            "inputType": "ENV",
+            "chartType": "NONE",
+            "modelDataType": {
+                "name": "number",
+                "description": "",
+                "dataType": "number",
+                "extension": null,
+                "validators": [],
+                "objectKeys": []
             }
         },
         {
